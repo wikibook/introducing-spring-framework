@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2>출력 화면</h2>
+    <div>입력한 텍스트는</div>
+    <div>
+        '<span th:text="*{echoForm.text}"> 여기에 입력한 값이 표시됩니다.</span>'
+    </div>
+    <div>입니다.</div>
+    <br />
+    <div>
+        <a href="../index.html" th:href="@{/}">첫 화면으로 이동</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2>入力画面</h2>
+    <form action="./output.html" th:action="@{/echo}"
+        th:object="${echoForm}" method="POST">
+        <div>テキストを入力してください ：</div>
+        <div>
+            <input type="text" name="text" th:field="*{text}" /><br />
+            <span th:if="${#fields.hasErrors('text')}"
+                th:errors="*{text}">textのエラーメッセージ</span>
+        </div>
+        <div>
+            <button type="submit">送信</button>
+        </div>
+    </form>
+</body>
+</html>

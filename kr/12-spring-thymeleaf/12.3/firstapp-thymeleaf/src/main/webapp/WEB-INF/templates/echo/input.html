@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2>입력 화면</h2>
+    <form action="./output.html" th:action="@{/echo}" th:object="${echoForm}"
+        method="POST">
+        <div>텍스트를 입력하세요.</div>
+        <div>
+            <input type="text" name="text" th:field="*{text}" /> <br /> <span
+                th:if="${#fields.hasErrors('text')}" th:errors="*{text}">text의
+                에러 메시지</span>
+        </div>
+        <div>
+            <button type="submit">전송</button>
+        </div>
+    </form>
+</body>
+</html>

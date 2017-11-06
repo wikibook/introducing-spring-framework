@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2>出力画面</h2>
+    <div>入力したテキストは・・・</div>
+    <div>
+        「<span th:text="*{echoForm.text}">ここに入力した値が表示される</span>」
+    </div>
+    <div>です。</div>
+    <br />
+    <div>
+        <a href="../index.html" th:href="@{/}">トップ画面へ戻る</a>
+    </div>
+</body>
+</html>
